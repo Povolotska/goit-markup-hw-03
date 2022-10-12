@@ -10,6 +10,30 @@
   --bgr-dark: #2f303a;
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+ul,
+ol {
+  margin: 0;
+  padding-left: 0;
+}
+button {
+  cursor: pointer;
+}
+address {
+  font-style: normal;
+}
+img {
+  display: block;
+}
+
 body {
   background: #ffffff;
   color: var(--title-color);
@@ -24,9 +48,35 @@ body {
   text-decoration: none;
 }
 
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+
+}
+
 /* ---------header--------- */
 .header {
   background: #ffffff;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.header-list {
+  display: flex;
+  gap: 50px;
+}
+
+.header-navigation {
+  display: flex;
+  align-items: center;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo-link {
@@ -35,14 +85,16 @@ body {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  color: #2196f3;
+  color: var(--accent-color);
 }
 
 .header-link:hover,
 .header-email:hover,
+.header-tel:hover,
 .header-link:focus,
-.header-email:focus {
-  color: #2196f3;
+.header-email:focus,
+.header-tel:focus {
+  color: var(--accent-color);
 }
 
 .header-email,
@@ -56,6 +108,7 @@ body {
 
 .header-logo {
   color: var(--black);
+  margin-right: 93px;
 }
 
 .header-link {
@@ -70,6 +123,8 @@ body {
 
 .hero {
   background: var(--bgr-dark);
+  padding-top: 200px;
+  padding-bottom: 280px;
 }
 
 .hero-title {
@@ -80,6 +135,8 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--white);
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .hero-btn {
@@ -95,6 +152,9 @@ body {
   background: #2196f3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  margin: 0 auto;
+  display: block;
+  padding: 10px 32px;
 }
 
 .hero-btn:hover,
@@ -120,11 +180,30 @@ body {
   line-height: 1.6px;
   letter-spacing: 0.03em;
   color: var(--title-color);
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 50px;
+  margin-top: 94px;
+
+}
+
+.radio-btn-primary {
+  padding: 6px 25px;
+}
+
+.radio-btn {
+  padding: 6px 22px;
 }
 
 .gallery {
   background: #ffffff;
   border: 1px solid #eeeeee;
+  width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+    margin-bottom: 94px;
 }
 
 .gallery-title {
@@ -133,6 +212,11 @@ body {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--title-color);
+  flex-basis: calc(100% / 3 - var(--card-set-gap));
+  padding-top: 20px;
+  padding-bottom: 4px;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 .gallery-subtitle {
@@ -140,9 +224,24 @@ body {
   line-height: 1.88;
   letter-spacing: 0.03em;
   color: var(--text-color);
+  padding-bottom: 20px;
+  padding-left: 24px;
+
 }
 
-/*----------text---------*/
+
+
+/*----------advantages---------*/
+
+.advantages {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.text {
+  display: flex;
+  gap: 30px;
+}
 
 .adv-name {
   font-weight: 700;
@@ -151,6 +250,7 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--title-color);
+  margin-bottom: 10px;
 }
 
 .desc {
@@ -158,6 +258,7 @@ body {
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: var(--text-color);
+  margin-bottom: 10px;
 }
 
 .title-before {
@@ -169,10 +270,34 @@ body {
   color: var(--title-color);
 }
 
+/* ----------image--------- */
+
+.section-image {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-color);
+}
+
+.image {
+  padding-top: 32px;
+  padding-bottom: 94px;
+  margin-top: 50px;
+  display: flex;
+  gap: 30px;
+  
+}
+
 /* --------team-------- */
 
 .team {
   background: #f5f4fa;
+  padding-top: 94px;
+  padding-bottom: 94px;
+  display: flex;
+  gap: 30px;
 }
 
 .section-team {
@@ -187,11 +312,17 @@ body {
 
 .team-img {
   background: #ffffff;
+
   /* material shadow v1 */
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+}
+
+.name-work {
+  padding-top: 30px;
+  padding-bottom: 59px;
 }
 
 .name {
@@ -201,6 +332,7 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-color);
+  padding-bottom: 10px;
 }
 
 .work {
@@ -215,6 +347,15 @@ body {
 
 .footer {
   background: var(--bgr-dark);
+  /* height: 252px; */
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-title {
+  margin-bottom: 20px;
 }
 
 .footer-logo {
@@ -234,6 +375,13 @@ body {
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: var(--white);
+  display: inline-block;
+  margin-bottom: 9px;
+}
+
+.address-tel {
+  margin-top: 9px;
+  padding-bottom: 60px;
 }
 
 .email,
