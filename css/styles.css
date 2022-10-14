@@ -62,7 +62,7 @@ body {
   background: #ffffff;
   padding-top: 24px;
   padding-bottom: 24px;
-  border: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
 }
 
 .header-list {
@@ -177,6 +177,10 @@ body {
   color: var(--title-color);
 }
 
+.text-name {
+  width: 270px;
+}
+
 /* ------filter---- */
 
 .filter {
@@ -232,7 +236,6 @@ body {
 
 .gallery {
   background: #ffffff;
-  border: 1px solid #eeeeee;
   width: 1200px;
   display: flex;
   flex-wrap: wrap;
@@ -325,12 +328,17 @@ body {
 
 /* --------team-------- */
 
+
 .team {
   background: #f5f4fa;
-  display: flex;
-  gap: 30px;
   padding-top: 94px;
   padding-bottom: 94px;
+
+}
+
+.team-list {
+display: flex;
+  gap: 30px;
 }
 
 .section-team {
@@ -341,6 +349,7 @@ body {
   letter-spacing: 0.03em;
 
   color: var(--title-color);
+  padding-bottom: 50px;
 }
 
 .team-img {
@@ -351,6 +360,8 @@ body {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+ 
+
 }
 
 .name-work {
